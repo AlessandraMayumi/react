@@ -7,7 +7,7 @@ const useVideos = (defaultSearchTerm) => {
     
     useEffect(() => {
         search(defaultSearchTerm)
-    }, []); // empty array means, run this function only one time
+    }, [defaultSearchTerm]);
 
     const search = async (term) => {
         const response = await youtube.get('/search', {
